@@ -1,5 +1,31 @@
 <!DOCTYPE html>
-<style>
+<html1>
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script type="text/javascript"> 
+	        $(document).ready(function(){
+		        $(".flip").hover(function(){
+		        $(".panel").slideToggle("slow");
+		        });
+	        });
+        </script>
+        
+        <style type="text/css"> 
+		div.panel,p.flip{
+		        margin:0px;
+		        padding:5px;
+		        text-align:center;
+		        background:#e5eecc;
+		        border:solid 1px #c3c3c3;
+		}
+		div.panel{
+		        height:120px;
+		        display:none;
+		}
+	</style>
+        
+        <style>
         html {
             height: 100%;
         }
@@ -12,9 +38,17 @@
             background-size: cover;
         }
     </style>
+        
+</head>
 
 <html1>
 <body>
-<h1>hello github pages</h1>
+        <h1>hello github pages</h1>
+        <div class="panel">
+		<p>W3School - 领先的 Web 技术教程站点</p>
+		<p>在 W3School，你可以找到你所需要的所有网站建设教程。</p>
+	</div>
+		 
+	<p class="flip">请点击这里</p>
 </body>
 </html>
