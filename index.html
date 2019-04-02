@@ -44,15 +44,49 @@
 
 <html1>
 <body>
-	<div id="abc">
-        	<h1 style="text-align: center;">hello github pages</h1>
-		<p class="flip">Click here!!<style = "text-align: center;"></p>
+
+        	<h1>hello github pages</h1>
+		<p class="flip">Click here!!</p>
         	<div class="panel">
 			<p>AAAAAAAAA</p>
 			<p>不是阿</p>
 		</div>
-	</div>
-		 
+
+	<div class="row">
+    		<div class="col-xs-6">
+      			<div>
+       				<p class="flip">Click here!!</p>
+        			<div class="panel">
+					<p>AAAAAAAAA</p>
+					<p>不是阿</p>
+				</div>
+      			</div>
+    		</div>
+    		<div class="col-xs-6">
+      			<h4>#right-well</h4>
+      			<div class="well" id="right-well">
+				<div id="paracht">
+     					<p>文章段落一</p> 
+     					<p>文章段落二</p> 
+     					<p>文章段落三</p> 
+     					<p>文章段落四</p> 
+     					<p>文章段落五</p> 
+     					<p>文章段落六</p> 
+     					<p>文章段落七</p> 
+     					<p>文章段落八</p> 
+				</div>
+				<button id="parachtshow" type="button">show paragraphs in sequence...</button>
+				var fadeinTime = 300;
+				$('#paracht p').hide();
+ 
+				$('#parachtshow').click(function(){
+       					$('#paracht p').first().stop(true, true).fadeToggle(fadeinTime, function() {
+            					$(this).next().stop(true, true).fadeToggle(fadeinTime, arguments.callee);
+       					});
+ 				});
+      			</div>
+    		</div>
+  	</div>	 
 
 </body>
 </html>
