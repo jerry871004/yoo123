@@ -10,6 +10,17 @@
 		        });
 	        });
         </script>
+	
+	<script type="text/javascript"> 
+		var fadeinTime = 300;
+		$('#paracht p').hide();
+ 
+		$('#parachtshow').click(function(){
+       			$('#paracht p').first().stop(true, true).fadeToggle(fadeinTime, function() {
+            			$(this).next().stop(true, true).fadeToggle(fadeinTime, arguments.callee);
+       			});
+ 		});
+	 </script>
         
         <style type="text/css"> 
 		div.panel,p.flip{
@@ -68,14 +79,6 @@
      					<p>文章段落八</p> 
 				</div>
 				<button id="parachtshow" type="button">show paragraphs in sequence...</button>
-				var fadeinTime = 300;
-				$('#paracht p').hide();
- 
-				$('#parachtshow').click(function(){
-       					$('#paracht p').first().stop(true, true).fadeToggle(fadeinTime, function() {
-            					$(this).next().stop(true, true).fadeToggle(fadeinTime, arguments.callee);
-       					});
- 				});
     		</div>
   	</div>	 
 
