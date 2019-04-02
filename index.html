@@ -12,14 +12,14 @@
         </script>
 	
 	<script type="text/javascript"> 
-		var fadeinTime = 300;
-		$('#paracht p').hide();
- 
-		$('#parachtshow').click(function(){
-       			$('#paracht p').first().stop(true, true).fadeToggle(fadeinTime, function() {
-            			$(this).next().stop(true, true).fadeToggle(fadeinTime, arguments.callee);
-       			});
- 		});
+    		$(document).ready(function(){
+      		$(".click").click(function(){
+        	$(".test1").fadeOut();
+        	$(".test2").fadeOut('fast');
+        	$(".test3").fadeOut('slow');
+        	$(".test4").fadeOut(5000);
+      		})
+    		});
 	 </script>
         
         <style type="text/css"> 
@@ -68,17 +68,11 @@
       			</div>
     		</div>
     		<div class="col-xs-6">
-				<div id="paracht">
-     					<p>文章段落一</p> 
-     					<p>文章段落二</p> 
-     					<p>文章段落三</p> 
-     					<p>文章段落四</p> 
-     					<p>文章段落五</p> 
-     					<p>文章段落六</p> 
-     					<p>文章段落七</p> 
-     					<p>文章段落八</p> 
-				</div>
-				<button id="parachtshow" type="button">show paragraphs in sequence...</button>
+			<button class="click">可利可蜜</button>
+			<p class="test1">Hello!! My name is Andy.</p>
+			<p class="test2">Hello!! My name is Andy.</p>
+			<p class="test3">Hello!! My name is Andy.</p>
+			<p class="test4">Hello!! My name is Andy.</p>
     		</div>
   	</div>	 
 
