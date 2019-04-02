@@ -14,10 +14,10 @@
 	<script type="text/javascript"> 
     		$(document).ready(function(){
       		$(".click").click(function(){
-        	$(".test1").fadeOut();
-        	$(".test2").fadeOut('fast');
-        	$(".test3").fadeOut('slow');
-        	$(".test4").fadeOut(5000);
+        	$(".test1").fadeToggle();
+        	$(".test2").fadeToggle('fast');
+        	$(".test3").fadeToggle('slow');
+        	$(".test4").fadeToggle(5000);
       		})
     		});
 	 </script>
